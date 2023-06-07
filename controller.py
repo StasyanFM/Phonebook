@@ -2,20 +2,20 @@ import view, model
 
 view.show_data()
 while True:
-    mode = input('Опции справочника' + '\n' + '0-поиск, 1-чтение файла, 2-добавление в файл, 3-удаление, 4-замена, 5-выход: ')
+    mode = input('Опции справочника\n'  '0 - Поиск\n' '1 - Чтение файла\n' '2 - Добавление в файл\n' '3 - Удаление\n' '4 - Замена\n' '5 - Выход\n' ' ')
     if mode == '1':
-        print(show_data())
+        print(view.show_data())
     elif mode == '0':
-        find_data()
+        model.find_data()
     elif mode == '2':
-        new_data()
+        model.new_data()
     elif mode == '3':
-        name = input('удаление контакта: ')
-        delete_person(name)
+        name = input('Удаление контакта: ')
+        model.delete_person(name)
     elif mode == '4':
-        first_name = input('переименование контакта: ')
-        new_name = input('ввод имени конткакта: ')
-        change_person(new_name,first_name)
+        first_name = input('Переименование контакта: ')
+        new_name = input('Ввод имени конткакта: ')
+        model.change_person(new_name,first_name)
     elif mode == '5':
         break
     else:
